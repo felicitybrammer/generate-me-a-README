@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/felicitybrammer/generate-me-a-README/issues"
   },
-  "homepage": "https://github.com/felicitybrammer/generate-me-a-README#readme"
+  "homepage": "https://github.com/felicitybrammer/generate-me-a-README#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }
