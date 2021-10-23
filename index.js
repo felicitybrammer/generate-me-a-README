@@ -36,9 +36,9 @@ const questions = [
         message: 'Provide instructions and examples for use. Include screenshots as needed.'
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
-        message: 'Please select a license',
+        message: 'Please select a license (required)',
         choices: [
             'GNU AGPLv3',
             'GNU GPLv3',
@@ -76,7 +76,7 @@ const questions = [
     {
         type: 'input',
         name: 'email',
-        message: 'Please enter your (GitHub) email address (required)',
+        message: 'Please enter your email address (required)',
         validate: email => {
             if (email) return true;
             console.log('You must enter your email address');

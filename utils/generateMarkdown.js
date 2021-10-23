@@ -10,7 +10,7 @@ function renderLicenseBadge(license) {
     case 'MIT License': return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`;
     case 'Boost Software License 1.0': return `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)]`;
     case 'The Unlicense': return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)]`;
-    default: return 'None';
+    //default: return 'None';
   }
 }
 
@@ -26,7 +26,7 @@ function renderLicenseLink(license) {
     case 'MIT License': return `(https://opensource.org/licenses/MIT)`;
     case 'Boost Software License 1.0': return `(https://www.boost.org/LICENSE_1_0.txt)`;
     case 'The Unlicense': return `(http://unlicense.org/)`;
-    default: return 'None';
+    //default: return 'None';
   }
 }
 
@@ -43,10 +43,10 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  # ${data.title}
-
-  ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
-    
+  # ${data.title} 
+  ${renderLicenseBadge(data.license)}  
+  ${renderLicenseLink(data.license)}
+      
   ## Description
 
   ${data.description}
