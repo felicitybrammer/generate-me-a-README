@@ -8,12 +8,22 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project? (required)'
+        message: 'What is the title of your project? (required)',
+        validate: title => {
+            if (title) return true; //is return needed?
+            console.log('You must enter a title for your project');
+            return false;
+        }
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Please give a description of your project (required)'
+        message: 'Please give a description of your project (required)',
+        validate: description => {
+            if (description) return true;
+            console.log('You must enter a description');
+            return false;
+        }
     },
     {
         type: 'input',
@@ -51,7 +61,27 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-           
+        message: 'Please provide any testing code for this project'
+    },
+    {
+        type: 'input',
+        name: 'username',
+        message: 'Please enter your GitHub username (required)',
+        validate: username => {
+            if (username) return true;
+            console.log('Please enter your GitHub username');
+            return false;
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your (GitHub) email address (required)',
+        validate: email => {
+            if (email) return true;
+            console.log('You must enter your email address');
+            return false;
+        }
     }
 ];
 
