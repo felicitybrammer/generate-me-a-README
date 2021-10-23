@@ -18,7 +18,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please give a description of your project (required)',
+        message: 'Please give a description of your project (required). What was your motivation? Why did you build this project? What problem does it solve? What did you learn? What makes your project stand out? If your project is deployed, include a link to the deployed application.',
         validate: description => {
             if (description) return true;
             console.log('You must enter a description');
@@ -28,29 +28,29 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Please provide any installation instructions for your project'
+        message: 'Please provide any installation instructions for your project. What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.'
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Please provide information about usage of this project'
+        message: 'Provide instructions and examples for use. Include screenshots as needed.'
     },
     {
         type: 'checkbox',
         name: 'license',
-        message: 'Please select the license you would like to use',
+        message: 'Please select a license',
         choices: [
             'GNU AGPLv3',
             'GNU GPLv3',
             'GNU LGPLv3',
-            'GNU FDL v1.3',
+            //'GNU FDL v1.3',
             'Mozilla Public License 2.0',
             'Apache License 2.0',
             'MIT License',
             'Boost Software License 1.0',
-            'IBM Public License Version 1.0',
-            'Eclipse Public License 1.0',
-            'Unlicense'
+            //'IBM Public License Version 1.0',
+          //  'Eclipse Public License 1.0',
+            'The Unlicense'
         ]
     },
     {
@@ -61,7 +61,7 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'Please provide any testing code for this project'
+        message: 'Please provide any testing examples for this project'
     },
     {
         type: 'input',
@@ -98,7 +98,7 @@ function init() {
     inquirer
         .prompt(questions)
         .then(data => {
-            writeToFile( location-dist?? ,generateMarkdown(data)) 
+            writeToFile('./dist/README.md',generateMarkdown(data)) 
         });
 }
 
