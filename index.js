@@ -18,7 +18,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please give a description of your project (required). What was your motivation? Why did you build this project? What problem does it solve? What did you learn? What makes your project stand out? If your project is deployed, include a link to the deployed application.',
+        message: 'Please give a description of your project (required).',
         validate: description => {
             if (description) return true;
             console.log('You must enter a description');
@@ -28,7 +28,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Please provide any installation instructions for your project. What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.'
+        message: 'What are the steps required to install your project?'
     },
     {
         type: 'input',
