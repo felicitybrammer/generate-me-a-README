@@ -1,6 +1,6 @@
 # Generate-Me-A-README
 
-[!JavaScript badge](https://img.shields.io/badge/javaScript-100%25-red)
+<!-- [!JavaScript badge](https://img.shields.io/badge/javaScript-100%25-red) -->
 ## Description
 
 A command-line application that provides prompts and generates a professional markdown document that can be quickly added to projects on GitHub.
